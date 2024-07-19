@@ -1,4 +1,4 @@
-## NxtTrendz Shopping Cart Website*
+## NxtTrendz Shopping Cart Website
 
 NxtTrendz is a comprehensive e-commerce platform designed to enhance your shopping experience. The website features a user-friendly interface and a wide range of functionalities, including:
 
