@@ -1,5 +1,7 @@
 ## NxtTrendz Shopping Cart Website
 
+https://nitishnxttrendz.ccbp.tech/
+
 NxtTrendz is a comprehensive e-commerce platform designed to enhance your shopping experience. The website features a user-friendly interface and a wide range of functionalities, including:
 
 **Add to Cart:** Users can effortlessly add items to their shopping cart, manage quantities, and remove items as needed.
@@ -17,6 +19,10 @@ NxtTrendz is a comprehensive e-commerce platform designed to enhance your shoppi
 **Similar Products:** Explore similar product recommendations to discover additional items that might be of interest.
 
 NxtTrendz is designed to provide a seamless and enjoyable shopping experience, leveraging modern web technologies to deliver high performance and responsive design.
+
+
+https://github.com/user-attachments/assets/18e83613-de47-4a41-afdc-d41ae82d3c3f
+
 
 
 
