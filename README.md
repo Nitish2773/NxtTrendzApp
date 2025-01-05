@@ -1,122 +1,62 @@
-## NxtTrendz Shopping Cart Website
+---
 
-https://nitishnxttrendz.ccbp.tech/
+# NxtTrendz Shopping Cart Website
 
-NxtTrendz is a comprehensive e-commerce platform designed to enhance your shopping experience. The website features a user-friendly interface and a wide range of functionalities, including:
+[Live Demo](https://nitishnxttrendz.ccbp.tech/)
 
-**Add to Cart:** Users can effortlessly add items to their shopping cart, manage quantities, and remove items as needed.
+**NxtTrendz** is an advanced e-commerce platform designed to enhance the online shopping experience. The website offers a seamless user interface and a variety of features to ensure an enjoyable shopping journey. 
 
-**Search Functionality:** Quickly find specific products using the search bar, ensuring users can locate their desired items with ease.
+### Key Features:
+- **Add to Cart**: Effortlessly add items to the cart, update quantities, or remove them as needed.
+- **Search Functionality**: Quickly find products using the search bar.
+- **Category Browsing**: Shop by product categories (e.g., electronics, fashion, home goods).
+- **Filtering Options**: Apply filters like price range and brand to refine search results.
+- **Sorting Capabilities**: Sort items based on price, popularity, and ratings.
+- **Product Details**: View comprehensive information about each product (description, availability, price, reviews).
+- **Similar Products**: Explore related products based on the selected item.
 
-**Category Browsing:** Shop for products by categories, making it simple to discover items within specific sections such as electronics, fashion, home goods, and more.
+### Design Files:
+Click to view the designs for different screen sizes:
+- [Extra Small and Small (Size < 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
+- [Medium, Large, and Extra Large (Size >= 768px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
 
-**Filtering Options:** Narrow down search results by applying filters, including price range, brand, and other product attributes.
+### Setup Instructions:
+1. Download dependencies:  
+   Run `npm install` in your project directory.
+2. Start the app:  
+   Use `npm start` to launch the app.
 
-**Sorting Capabilities:** Sort items based on various criteria such as price, popularity, and ratings, helping users make informed purchasing decisions.
+### Features to Implement:
 
-**Product Details:** View detailed information about each product, including descriptions, availability, brand, price, and customer reviews.
+1. **Authentication & Cart Access:**
+   - Unauthenticated users trying to access the **Cart** route will be redirected to the **Login** page.
 
-**Similar Products:** Explore similar product recommendations to discover additional items that might be of interest.
+2. **Cart Features:**
+   - When the user adds the same product multiple times, the quantity should be updated, and the total cart item count should remain unchanged.
+   - The **Cart Route** should display the total amount and the number of items in the cart.
+   - In the **Cart Route**:
+     - Clicking the plus icon should increase the quantity by one.
+     - Clicking the minus icon should decrease the quantity by one.
+     - If the quantity is one and the minus icon is clicked, the item should be removed from the cart.
+     - The product price and **Cart Summary** should update accordingly.
+   - Clicking the **Remove** button on any cart item should remove the item from the cart.
+   - Clicking the **Remove All** button should clear all items from the cart and show the [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png).
 
-NxtTrendz is designed to provide a seamless and enjoyable shopping experience, leveraging modern web technologies to deliver high performance and responsive design.
+3. **Cart Context Methods:**
+   - `cartList`: Stores the cart items.
+   - `removeAllCartItems`: Removes all items from the cart.
+   - `addCartItem`: Adds an item to the cart.
+   - `removeCartItem`: Removes an individual item from the cart.
+   - `incrementCartItemQuantity`: Increases the quantity of a product in the cart.
+   - `decrementCartItemQuantity`: Decreases the quantity of a product in the cart.
 
+### Components Structure:
+For an overview of how the components are structured, refer to the image below:
 
-https://github.com/user-attachments/assets/18e83613-de47-4a41-afdc-d41ae82d3c3f
+![Component Structure](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png)
 
-
-
-
-<br/>
-<div style="text-align: center;">
-  <video style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12);outline:none;" loop="true" autoplay="autoplay" controls="controls" muted>
-    <source src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-output.mp4" type="video/mp4">
-  </video>
-</div>
-<br/>
-
-### Design Files
-
-<details>
-<summary>Click to view</summary>
-
-- [Extra Small (Size < 576px) and Small (Size >= 576px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-sm-output-v0.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-lg-output.png)
-
-</details>
-
-### Set Up Instructions
-
-<details>
-<summary>Click to view</summary>
-
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
-
-### Completion Instructions
-
-<details>
-<summary>Functionality to be added</summary>
-<br/>
-
-The app must have the following functionalities
-
-- When an unauthenticated user tries to access the **Cart** Route, then the page should be navigated to **Login** Route
-
-- Following are the features to be implemented
-
-  - Feature 1
-
-    - When an authenticated user tries to add the same product multiple times
-      - The quantity of the product should be updated accordingly, and the count of the cart items in the header should be remained same
-
-  - Feature 2
-
-    - The total amount and number of items in the cart should be displayed in the **Cart** Route
-
-  - Feature 3
-
-    - In each cart item in the cart
-      - When the plus icon is clicked, then the quantity of the product should be incremented by one
-      - When the minus icon is clicked, then the quantity of the product should be decremented by one
-      - When the quantity of the product is one and the minus icon is clicked, then the respective product should be removed from the cart
-      - Based on the quantity of the product, the product price and the Cart Summary, i.e the total cost should be updated accordingly
-
-  - Feature 4
-
-    - When an authenticated user clicks on the remove button, cart item should be removed from the cart list
-
-  - Feature 5
-
-    - When an authenticated user clicks on the **Remove All** button, all the cart items should be removed from the cart and [Empty Cart View](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-empty-cart-view.png) should be displayed
-
-- The `CartContext` has an object as a value with the following properties
-  - `cartList` - this key stores the cart items
-  - `removeAllCartItems` - this method is used to remove all the cart items in the `cartList`
-  - `addCartItem` - this method adds the cart item to the `cartList`
-  - `removeCartItem` - this method removes the cart item from the `cartList`
-  - `incrementCartItemQuantity` - this method increases the quantity of a product in the `cartList`
-  - `decrementCartItemQuantity` - this method decreases the quantity of a product in the `cartList`
-
-</details>
-
-<details>
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-cart-features-component-structure-breakdown.png" alt="component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
+### Implementation Files:
+The following files need to be updated or created for the implementation:
 - `src/App.js`
 - `src/components/Cart/index.js`
 - `src/components/Cart/index.css`
@@ -124,83 +64,52 @@ Use these files to complete the implementation:
 - `src/components/CartItem/index.css`
 - `src/components/CartSummary/index.js`
 - `src/components/CartSummary/index.css`
-</details>
 
-### Quick Tips
+### Quick Tips:
 
-<details>
-<summary>Click to view</summary>
-<br>
+- **Line Height**: The `line-height` CSS property sets the height of a line box. You can use it to set the distance between lines of text.
 
-- The `line-height` CSS property sets the height of a line box. It's commonly used to set the distance between lines of text
-
-  ```
+  Example:
+  ```css
   line-height: 1.5;
   ```
 
-    <br/>
-    <img src="https://assets.ccbp.in/frontend/react-js/line-height-img.png" alt="line height" style="width:90%; max-width: 600px;"/>
+- **Array Method `find()`**: The `find()` method returns the first item in an array that satisfies the provided testing function.
 
-- The array method `find()` returns the first item's value that satisfies the provided testing function. If no item is found, it returns `undefined`
-
-  **Syntax**: `arr.find(Testing Function)`
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- `BsPlusSquare`, `BsDashSquare` icons from `react-icons` should be used for **plus** and **minus** buttons in cart item
-- The Cart Item should consist of two HTML button elements with testid attribute values as **plus** and **minus** respectively
-- `AiFillCloseCircle` icon from react-icons should be used for **remove** button in cartItem
-- The Cart Item should consist of an HTML button element with testid attribute values as **remove**
-- The product image in **Cart Item** Route should have the alt as `title` of the product
-
-- Prime User credentials
-
-  ```text
-   username: rahul
-   password: rahul@2021
+  Example:
+  ```javascript
+  const item = arr.find(item => item.name === 'Product');
   ```
 
-- Non-Prime User credentials
+### Important Notes:
+- The app should use `react-icons` for buttons:
+  - **Plus Icon**: `BsPlusSquare`
+  - **Minus Icon**: `BsDashSquare`
+  - **Remove Icon**: `AiFillCloseCircle`
+  
+- **Test IDs**:
+  - Cart Item buttons should have the test IDs **plus** and **minus** for plus and minus actions.
+  - The Cart Item **remove** button should have the test ID `remove`.
 
-  ```text
-   username: raja
-   password: raja@2021
-  ```
+### Prime User Credentials:
+- Username: `rahul`
+- Password: `rahul@2021`
 
-</details>
+### Non-Prime User Credentials:
+- Username: `nitish`
+- Password: `nitish@2021`
 
-### Resources
+### Colors Used:
+- ![#0b69ff](https://www.colorhexa.com/0b69ff.png) `#0b69ff`
+- ![#171f46](https://www.colorhexa.com/171f46.png) `#171f46`
+- ![#616e7c](https://www.colorhexa.com/616e7c.png) `#616e7c`
+- ![#ffffff](https://www.colorhexa.com/ffffff.png) `#ffffff`
 
-<details>
-<summary>Colors</summary>
+### Font Used:
+- **Roboto**
 
-<br/>
+### Notes:
+- All components should be placed in the `src/components` directory.
+- Do not modify the folder names as the tests expect these exact names.
 
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #171f46; width: 150px; padding: 10px; color: white">Hex: #171f46</div>
-<div style="background-color: #616e7c; width: 150px; padding: 10px; color: white">Hex: #616e7c</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-
+---
