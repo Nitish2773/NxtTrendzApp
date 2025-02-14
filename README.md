@@ -153,9 +153,3 @@ const item = arr.find(item => item.name === 'Product');
 
 ---
 
-## 📌 Notes
-- Place all components inside `src/components`.
-- Maintain the given folder structure to ensure compatibility with test cases.
-
----
-
